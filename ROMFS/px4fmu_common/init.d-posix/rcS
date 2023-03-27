@@ -236,6 +236,7 @@ navigator start
 if px4-micrortps_client status > /dev/null 2>&1
 then
 	. px4-rc.rtps
+	microdds_client start -t udp -p 8888
 fi
 
 if param greater -s MNT_MODE_IN -1
