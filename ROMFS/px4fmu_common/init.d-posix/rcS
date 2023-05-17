@@ -19,11 +19,11 @@ PATH="$PATH:${R}etc/init.d-posix"
 
 # check for ekf2 replay
 # shellcheck disable=SC2154
-if [ "$replay_mode" = "ekf2" ]
-then
-	. ${R}etc/init.d-posix/rc.replay
-	exit 0
-fi
+# if [ "$replay_mode" = "ekf2" ]
+# then
+# 	. ${R}etc/init.d-posix/rc.replay
+# 	exit 0
+# fi
 
 # initialize script variables
 set VEHICLE_TYPE                none
@@ -336,4 +336,4 @@ fi
 . ${R}etc/init.d/rc.logging
 
 mavlink boot_complete
-replay trystart
+# replay trystart
