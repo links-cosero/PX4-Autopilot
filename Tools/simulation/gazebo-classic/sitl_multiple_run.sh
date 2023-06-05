@@ -34,7 +34,8 @@ function spawn_model() {
 
 	pushd "$working_dir" &>/dev/null
 	echo "starting instance $N in $(pwd)"
-	$build_path/bin/px4 -i $N -d "$build_path/etc" >out.log 2>err.log &
+	NS_ID=$((1+${N}))
+	PX4_UXRCE_DDS_NS="drone${NS_ID}" $build_path/bin/px4 -i $N -d "$build_path/etc" >out.log 2>err.log &
 
 	set --
 	set -- ${@} ${src_path}/Tools/simulation/gazebo-classic/sitl_gazebo-classic/scripts/jinja_gen.py
