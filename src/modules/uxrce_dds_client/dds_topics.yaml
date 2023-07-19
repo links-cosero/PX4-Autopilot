@@ -38,8 +38,8 @@ publications:
   - topic: /fmu/out/vehicle_local_position
     type: px4_msgs::msg::VehicleLocalPosition
 
-  # - topic: /fmu/out/vehicle_odometry
-  #   type: px4_msgs::msg::VehicleOdometry
+  - topic: /fmu/out/vehicle_odometry
+    type: px4_msgs::msg::VehicleOdometry
 
   - topic: /fmu/out/vehicle_status
     type: px4_msgs::msg::VehicleStatus
